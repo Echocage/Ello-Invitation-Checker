@@ -4,9 +4,6 @@ import re
 import requests
 import sys
 
-finished = 0
-
-
 def send_request(item):
     req = requests.get('https://ello.co/api/v1/availability/invitation_code?value=' + item)
     if req.json()['available']:
