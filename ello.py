@@ -23,5 +23,4 @@ if __name__ == '__main__':
     raw_text = open(args[1], 'r').read()
 
     for line in re.findall('[a-z]+-[a-z]+-[a-z]+', raw_text):
-        print line
         Thread(target=send_request, args=(line,)).start()
